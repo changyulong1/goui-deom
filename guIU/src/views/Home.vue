@@ -1,6 +1,6 @@
 <template>
    <div>
-       <topanv/>
+       <Topanv/>
        <div class="banner">
             <h1>vux-UI</h1>
             <h2>一个非常了厉害的ui</h2>
@@ -13,9 +13,9 @@
    </div>
 </template>
 <script lang="ts">
-import topanv from '../components/topanv.vue'
+import Topanv from '../components/Topanv.vue'
 export default{
-  components: { topanv },
+  components: { Topanv },
     setup() {
         
     },
