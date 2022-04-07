@@ -29,15 +29,26 @@
     <Button>普通按钮</Button>
     <Button level="danger">危险按钮</Button>
   </div>
-    <div>
+  <div>
     <Button theme="link" level="main">主要按钮</Button>
     <Button theme="link">普通按钮</Button>
     <Button theme="link" level="danger">危险按钮</Button>
   </div>
-    <div>
+  <div>
     <Button theme="text" level="main">主要按钮</Button>
     <Button theme="text">普通按钮</Button>
     <Button theme="text" level="danger">危险按钮</Button>
+  </div>
+  <h2>实例4</h2>
+  <div>
+    <Button theme="button" disabled>禁止按钮</Button>
+    <Button theme="link">禁止按钮</Button>
+    <Button theme="text">禁止按钮</Button>
+  </div>
+    <h2>实例5</h2>
+  <div>
+    <Button theme="button" loading>加载按钮</Button>
+    <Button theme="button">普通按钮</Button>
   </div>
 </template>
 <script lang="ts">
