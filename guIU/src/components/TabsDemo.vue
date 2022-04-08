@@ -3,7 +3,7 @@
     <h1>实例1</h1>
     <tabs v-model:selected="x">
         <Tab title="导航1">内容1</Tab>
-        <Tab title="导航2">内容1</Tab>
+        <Tab title="导航">内容2222222</Tab>
     </tabs>
 </template>
 <script lang="ts">
