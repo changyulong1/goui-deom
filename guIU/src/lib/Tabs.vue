@@ -58,11 +58,6 @@ export default {
         throw new Error("Tabs内部标签必须是Tab");
       }
     });
-    const cunt = computed(() => {
-      return defaults.filter((tag) => {
-        return tag.props.title === props.selected;
-      })[0];
-    });
     const titles = defaults.map((tag) => {
       return tag.props.title;
     });
@@ -72,7 +67,6 @@ export default {
     return {
       defaults,
       titles,
-      cunt,
       select,
       selectedItem,
       indicator,
