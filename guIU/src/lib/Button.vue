@@ -164,8 +164,8 @@ $grey: grey;
       }
     }
   }
-  &.guIu-theme-button{
-       > .gulu-loadingIndicator {
+  &.guIu-theme-button {
+     .gulu-loadingIndicator {
       width: 14px;
       height: 14px;
       display: inline-block;
