@@ -6,17 +6,10 @@
 import { ref } from 'vue'
 export default {
     props:{
-        path:{
+        content:{
             tupe:String,
             required: true
         }
-    },
-   setup(props){
-       const content = ref(null)
-       import(props.path).then((res)=>{
-           content.value = res.default
-       })
-        return {content}
-   }
+    }
 }
 </script>
