@@ -2,8 +2,7 @@
   <article class="markdown-body" v-html="content">
   </article>
 </template>
-<script>
-import { ref } from 'vue'
+<script lang="ts">
 export default {
     props:{
         content:{

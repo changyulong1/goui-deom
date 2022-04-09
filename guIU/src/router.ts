@@ -4,7 +4,6 @@ import SwitchDemo from './components/SwitchDemo.vue'
 import ButtonDemo from './components/ButtonDemo.vue'
 import DialogDemo from './components/DialogDemo.vue'
 import TabsDemo from './components/TabsDemo.vue'
-import DocDemo from './components/DocDemo.vue'
 import intro from './markdown/intro.md'
 import getStarted from './markdown/get-started.md'
 import install from './markdown/install.md'
@@ -34,7 +33,3 @@ export const router = createRouter({
         },
     ],
 })
-
-router.afterEach(() => {
-    console.log("路由切换了");
-});
