@@ -18,14 +18,13 @@ export default {
   },
 };
 </script>
-
 <style lang="scss">
 $h: 22px;
 $h1: $h - 4px;
 .guIu-Switch {
   height: $h;
   width: $h * 2;
-  border-radius: $h/2;
+  border-radius: calc($h/2);
   border: none;
   background: #bfbfbf;
   position: relative;
@@ -36,7 +35,7 @@ $h1: $h - 4px;
     width: $h1;
     height: $h1;
     background: white;
-    border-radius: $h1/2;
+    border-radius: calc($h/2);
     transition: all 250ms;
   }
   &.guIu-checked {
