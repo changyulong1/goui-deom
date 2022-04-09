@@ -1,7 +1,7 @@
 <template>
   <button @click="toggle" class="guIu-Switch" :class="{ 'guIu-checked': value }">
     <span></span>
-    </button>
+  </button>
 </template>
 <script lang="ts">
 export default {
