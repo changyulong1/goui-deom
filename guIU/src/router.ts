@@ -8,28 +8,28 @@ import DocDemo from './components/DocDemo.vue'
 import Intro from './views/Intro.vue'
 import GetStarted from './views/GetStarted.vue'
 import Install from './views/Install.vue'
-import {createWebHashHistory,createRouter} from 'vue-router'
+import { createWebHashHistory, createRouter } from 'vue-router'
 import marked from './components/marked.vue'
 import { h } from 'vue'
 
 const history = createWebHashHistory()
-
+const md = fileNmae =>  h(marked, { path: `../markdown/${fileNmae}.md`, key: fileNmae })
 export const router = createRouter({
-    history:history,
-    routes:[
-        {path:'/',component: Home},
+    history: history,
+    routes: [
+        { path: '/', component: Home },
         {
-            path:'/Doc',
-            component:Doc,
-            children:[
-                {path:'',component:DocDemo},
-                {path:'intro',component:h(marked,{path:'../markdown/intro.md',key:1})},
-                {path:'get-started',component:h(marked,{path:'../markdown/get-started.md',key:2})},
-                { path: "install", component: h(marked,{path:'../markdown/install.md',key:3}) },
-                {path:'switch',component:SwitchDemo},
-                {path:'button',component:ButtonDemo},
-                {path:'dialog',component:DialogDemo},
-                {path:'tabs',component:TabsDemo}
+            path: '/Doc',
+            component: Doc,
+            children: [
+                { path: '', component: DocDemo },
+                { path: 'intro', component:md('intro')},
+                { path: 'get-started', component: md('get-started') },
+                { path: "install", component: md('install') },
+                { path: 'switch', component: SwitchDemo },
+                { path: 'button', component: ButtonDemo },
+                { path: 'dialog', component: DialogDemo },
+                { path: 'tabs', component: TabsDemo }
             ],
         },
     ],
@@ -37,4 +37,4 @@ export const router = createRouter({
 
 router.afterEach(() => {
     console.log("路由切换了");
-  });
+});
