@@ -4,7 +4,7 @@
     <div class="demo">
       <h2>常规用法</h2>
       <div class="demo-component">
-        <Switch1Demo/>
+        <component :is="Switch1Demo"/>
       </div>
       <div class="demo-actions">
         <Button>查看代码</Button>
@@ -16,7 +16,7 @@
     <div class="demo">
       <h2>支持 disabled</h2>
       <div class="demo-component">
-        <Switch2Demo/>
+         <component :is="Switch2Demo"/>
       </div>
       <div class="demo-actions">
         <Button>查看代码</Button>
@@ -29,13 +29,12 @@
 </template>
 <script lang="ts">
 import { ref } from "vue";
-import Switch from "../lib/Switch.vue";
 import Button from "../lib/Button.vue"
 import Switch1Demo from "../components/Switch1Demo.vue"
 import Switch2Demo from "../components/Switch2Demo.vue"
 console.log(Switch1Demo.__sourceCode)
 export default {
-  components: { Switch,Button,Switch1Demo,Switch2Demo },
+  components: { Button },
   setup() {
     const bool = ref(false);
     return { bool,Switch1Demo,Switch2Demo };
@@ -67,7 +66,7 @@ $border-color: #d9d9d9;
   &-code {
     padding: 8px 16px;
     border-top: 1px dashed $border-color;
-
+    overflow:auto;
     >pre {
       line-height: 1.1;
       font-family: Consolas, 'Courier New', Courier, monospace;
