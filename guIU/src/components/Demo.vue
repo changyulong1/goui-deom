@@ -5,7 +5,8 @@
       <component :is="component" />
     </div>
     <div class="demo-actions">
-      <Button @click="toggleCode">查看代码</Button>
+      <Button @click="hideCode" v-if="codeVisible">隐藏代码</Button>
+       <Button @click="showCode" v-else>查看代码</Button>
     </div>
     <div class="demo-code" v-if="codeVisible">
       <pre class="language-css" v-html="fack"></pre>
@@ -32,15 +33,14 @@ export default {
             'html'
           )
         })
-        const toggleCode = ()=>{
-            codeVisible.value = !codeVisible.value
-        }
-
+        const hideCode = ()=> codeVisible.value = false
+        const showCode = ()=> codeVisible.value = true
         return {
             Prism,
             fack,
             codeVisible,
-            toggleCode
+            hideCode,
+            showCode
         }
     },
 }
