@@ -25,6 +25,7 @@
         <pre class="language-css" v-html="Prism.highlight(Switch2Demo.__sourceCode, Prism.languages.html,'html')"></pre>
       </div>
     </div>
+    <Demo :component="Switch2Demo"/>
   </div>
 </template>
 <script lang="ts">
@@ -35,9 +36,9 @@ import Switch2Demo from "../components/Switch2Demo.vue"
 import 'prismjs'
 import 'prismjs/themes/prism.css'
 const Prism = (window as any).Prism
-
+import Demo from "./Demo.vue"
 export default {
-  components: { Button },
+  components: { Button,Demo },
   setup() {
     const bool = ref(false);
     return { bool,Switch1Demo,Switch2Demo,Prism};
