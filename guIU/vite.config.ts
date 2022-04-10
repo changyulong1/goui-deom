@@ -2,10 +2,17 @@
 import { md } from "./plugins/md";
 import fs from 'fs'
 import {baseParse} from '@vue/compiler-core'
+import prismjs from 'vite-plugin-prismjs';
 export default {
   base: './',
   assetsDir: 'assets',
-  plugins: [md()],
+  plugins: [
+    md(),
+    prismjs({
+      languages: ['json'],
+      //  languages: 'all',
+    })  
+  ],
   vueCustomBlockTransforms: {
     demo: (options) => {
       const { code, path } = options
