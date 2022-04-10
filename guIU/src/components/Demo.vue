@@ -9,7 +9,7 @@
        <Button @click="showCode" v-else>查看代码</Button>
     </div>
     <div class="demo-code" v-if="codeVisible">
-      <pre class="language-css" v-html="fack"></pre>
+      <pre class="language-css line-numbers" v-html="fack"></pre>
     </div>
   </div>
 </template>
