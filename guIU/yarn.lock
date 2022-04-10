@@ -350,7 +350,7 @@
 
 "@vue/reactivity@3.0.0":
   version "3.0.0"
-  resolved "https://registry.npmmirror.com/@vue/reactivity/-/reactivity-3.0.0.tgz#fd15632a608650ce2a969c721787e27e2c80aa6b"
+  resolved "https://registry.npmjs.org/@vue/reactivity/-/reactivity-3.0.0.tgz#fd15632a608650ce2a969c721787e27e2c80aa6b"
   integrity sha512-mEGkztGQrAPZRhV7C6PorrpT3+NtuA4dY2QjMzzrW31noKhssWTajRZTwpLF39NBRrF5UU6cp9+1I0FfavMgEQ==
   dependencies:
     "@vue/shared" "3.0.0"
@@ -364,7 +364,7 @@
 
 "@vue/runtime-core@3.0.0":
   version "3.0.0"
-  resolved "https://registry.npmmirror.com/@vue/runtime-core/-/runtime-core-3.0.0.tgz#480febf1bfe32798b6abbd71a88f8e8b473a51c2"
+  resolved "https://registry.npmjs.org/@vue/runtime-core/-/runtime-core-3.0.0.tgz#480febf1bfe32798b6abbd71a88f8e8b473a51c2"
   integrity sha512-3ABMLeA0ZbeVNLbGGLXr+pNUwqXILOqz8WCVGfDWwQb+jW114Cm8djOHVVDoqdvRETQvDf8yHSUmpKHZpQuTkA==
   dependencies:
     "@vue/reactivity" "3.0.0"
@@ -380,7 +380,7 @@
 
 "@vue/runtime-dom@3.0.0":
   version "3.0.0"
-  resolved "https://registry.npmmirror.com/@vue/runtime-dom/-/runtime-dom-3.0.0.tgz#e0d1f7c7e22e1318696014cc3501e06b288c2e11"
+  resolved "https://registry.npmjs.org/@vue/runtime-dom/-/runtime-dom-3.0.0.tgz#e0d1f7c7e22e1318696014cc3501e06b288c2e11"
   integrity sha512-f312n5w9gK6mVvkDSj6/Xnot1XjlKXzFBYybmoy6ahAVC8ExbQ+LOWti1IZM/adU8VMNdKaw7Q53Hxz3y5jX8g==
   dependencies:
     "@vue/runtime-core" "3.0.0"
@@ -2274,7 +2274,7 @@ vue-router@4.0.0-beta.3:
 
 vue@3.0.0:
   version "3.0.0"
-  resolved "https://registry.npmmirror.com/vue/-/vue-3.0.0.tgz#cfb5df5c34efce319b113a1667d12b74dcfd9c90"
+  resolved "https://registry.npmjs.org/vue/-/vue-3.0.0.tgz#cfb5df5c34efce319b113a1667d12b74dcfd9c90"
   integrity sha512-ZMrAARZ32sGIaYKr7Fk2GZEBh/VhulSrGxcGBiAvbN4fhjl3tuJyNFbbbLFqGjndbLoBW66I2ECq8ICdvkKdJw==
   dependencies:
     "@vue/compiler-dom" "3.0.0"
@@ -2283,7 +2283,7 @@ vue@3.0.0:
 
 vue@^3.0.0-rc.1:
   version "3.2.31"
-  resolved "https://registry.npmmirror.com/vue/-/vue-3.2.31.tgz#e0c49924335e9f188352816788a4cca10f817ce6"
+  resolved "https://registry.npmjs.org/vue/-/vue-3.2.31.tgz#e0c49924335e9f188352816788a4cca10f817ce6"
   integrity sha512-odT3W2tcffTiQCy57nOT93INw1auq5lYLLYtWpPYQQYQOOdHiqFct9Xhna6GJ+pJQaF67yZABraH47oywkJgFw==
   dependencies:
     "@vue/compiler-dom" "3.2.31"
