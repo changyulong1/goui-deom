@@ -1,5 +1,5 @@
 <template>
-  <button class="guIu-button" :class="classes" :disabled="disabled">
+  <button class="goIu-button" :class="classes" :disabled="disabled">
     <span v-if="loading" class="gulu-loadingIndicator"></span>
     <slot />
   </button>
@@ -34,9 +34,9 @@ export default {
     const { theme, size, level } = props;
     const classes = computed(() => {
       return {
-        [`guIu-theme-${theme}`]: theme,
-        [`guIu-size-${size}`]: size,
-        [`guIu-level-${level}`]: level,
+        [`goIu-theme-${theme}`]: theme,
+        [`goIu-size-${size}`]: size,
+        [`goIu-level-${level}`]: level,
       };
     });
     return { classes };
@@ -52,7 +52,7 @@ $blue: #40a9ff;
 $radius: 4px;
 $red: red;
 $grey: grey;
-.guIu-button {
+.goIu-button {
   &[disabled] {
     cursor: not-allowed;
     color: $grey;
@@ -89,7 +89,7 @@ $grey: grey;
   &::-moz-focus-inner {
     border: 0;
   }
-  &.guIu-theme-link {
+  &.goIu-theme-link {
     border-color: transparent;
     box-shadow: none;
     color: $blue;
@@ -98,7 +98,7 @@ $grey: grey;
       color: lighten($blue, 10%);
     }
   }
-  &.guIu-theme-text {
+  &.goIu-theme-text {
     border-color: transparent;
     box-shadow: none;
     color: inherit;
@@ -107,18 +107,18 @@ $grey: grey;
       background: darken(white, 5%);
     }
   }
-  &.guIu-size-big {
+  &.goIu-size-big {
     font-size: 24px;
     height: 48px;
     padding: 0 16px;
   }
-  &.guIu-size-small {
+  &.goIu-size-small {
     font-size: 12px;
     height: 20px;
     padding: 0 4px;
   }
-  &.guIu-theme-button {
-    &.guIu-level-main {
+  &.goIu-theme-button {
+    &.goIu-level-main {
       background: $blue;
       color: white;
       border-color: $blue;
@@ -128,7 +128,7 @@ $grey: grey;
         border-color: darken($blue, 10%);
       }
     }
-    &.guIu-level-danger {
+    &.goIu-level-danger {
       background: $red;
       color: white;
       border-color: $red;
@@ -139,8 +139,8 @@ $grey: grey;
       }
     }
   }
-  &.guIu-theme-link {
-    &.guIu-level-danger {
+  &.goIu-theme-link {
+    &.goIu-level-danger {
       color: $red;
       &:hover,
       &:focus {
@@ -148,15 +148,15 @@ $grey: grey;
       }
     }
   }
-  &.guIu-theme-text {
-    &.guIu-level-main {
+  &.goIu-theme-text {
+    &.goIu-level-main {
       color: $blue;
       &:hover,
       &:focus {
         color: darken($blue, 10%);
       }
     }
-    &.guIu-level-danger {
+    &.goIu-level-danger {
       color: $red;
       &:hover,
       &:focus {
@@ -164,7 +164,7 @@ $grey: grey;
       }
     }
   }
-  &.guIu-theme-button {
+  &.goIu-theme-button {
      .gulu-loadingIndicator {
       width: 14px;
       height: 14px;

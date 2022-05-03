@@ -1,21 +1,30 @@
 <template>
-  <div class="guIu-Carousel" ref="parnter">
+  <div class="goIu-Carousel" ref="parnter">
     <ul>
-      <li v-for="(time, i) in array" :class="{ show: index === i }" :key="i">
-        <img :src="time" />
+      <li v-for="(time, i) in urlList" :class="{ show: index === i }" :key="i">
+        <img :src="time.imgUrl" alt="time.imgUrl" />
       </li>
     </ul>
     <div class="btn">
-      <span @click="left">
+      <span @click="left" @mouseenter="clear" @mouseleave="Rotation">
         <svg class="icon">
           <use xlink:href="#icon-zuojiantou"></use>
         </svg>
       </span>
-      <span @click="right">
+      <span @click="right" @mouseenter="clear" @mouseleave="Rotation">
         <svg class="icon">
           <use xlink:href="#icon-arrow-right"></use>
         </svg>
       </span>
+    </div>
+    <div class="ball">
+      <span
+        v-for="(time, i) in urlList"
+        :key="i"
+        :class="{ selector: index === i }"
+        @mouseenter="MoveIn(i)"
+        @mouseleave="Rotation"
+      ></span>
     </div>
   </div>
 </template>
@@ -23,53 +32,66 @@
 import { onMounted, ref } from "vue";
 export default {
   props: {
-    array: {
+    urlList: {
       type: Array,
       default: [],
     },
-    x: {
+    switch: {
       type: Boolean,
       default: false,
+    },
+    time: {
+      type: Number,
+      default: 1000,
     },
   },
   setup(props) {
     const index = ref(0);
-    let time = ref(null);
+    let time = null;
+    onMounted(() => {
+      Rotation();
+    });
+    const Rotation = () => {
+      if (props.switch) {
+        time = setInterval(() => {
+          if (index.value === props.urlList.length - 1) {
+            index.value = 0;
+          }
+          index.value += 1;
+        }, props.time);
+      }
+    };
     const left = () => {
-      time.value = null;
       if (index.value === 0) {
         return;
       }
       index.value -= 1;
     };
     const right = () => {
-      time.value = null;
-      if (index.value === props.array.length - 1) {
+      if (index.value === props.urlList.length - 1) {
         return;
       }
       index.value += 1;
     };
-    onMounted(() => {
-      if (props.x) {
-        time.value = setInterval(() => {
-          if (index.value === 0) {
-            index.value + props.array.length - 1;
-          }
-          if (index.value === props.array.length - 1) {
-            index.value = 0;
-          }
-          index.value += 1;
-        }, 1500);
+    const MoveIn = (value) => {
+      clearInterval(time);
+      index.value = value;
+    };
+    const clear = () => {
+      if (props.switch) {
+        clearInterval(time);
       }
-    });
-    return { index, left, right };
+    };
+
+    return { index, left, right, MoveIn, clear, Rotation };
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.guIu-Carousel {
-  height: 300px;
+.goIu-Carousel {
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   position: relative;
   > ul {
@@ -84,7 +106,6 @@ export default {
       display: none;
       width: 100%;
       height: 100%;
-      background: red;
       > img {
         width: 100%;
         height: 100%;
@@ -102,14 +123,33 @@ export default {
     display: flex;
     justify-content: space-between;
     > span {
-      padding: 10px;
+      padding: 10px 20px;
       border-radius: 100%;
-      border: 1px solid #000;
       display: flex;
       justify-content: center;
       align-items: center;
       > .icon {
         font-size: 20px;
+      }
+    }
+  }
+  > .ball {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 4px;
+    > span {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border: 1px solid #ccc;
+      border-radius: 100%;
+      margin: 0 10px;
+      &.selector {
+        background: yellowgreen;
       }
     }
   }

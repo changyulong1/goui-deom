@@ -1,9 +1,10 @@
 <demo>
-常规使用
+自动轮播
 </demo>
 <template>
   <div class="parent">
-    <Carousel :urlList="list" />
+    <!-- 绑定switch和time,switch开启自动轮播,time设置间隔时间默认1000 -->
+    <Carousel :urlList="list" :switch="true" :time="1500" />
   </div>
 </template>
 <script lang="ts">

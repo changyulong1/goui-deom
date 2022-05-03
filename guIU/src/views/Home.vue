@@ -3,8 +3,8 @@
     <div class="topnavAndBanner">
       <Topanv />
       <div class="banner">
-        <h1>vux-UI</h1>
-        <h2>一个非常了厉害的ui</h2>
+        <h1>goui</h1>
+        <h2>一个简单的ui库</h2>
         <p class="actions">
           <a href="https://github.com">github</a>
           <router-link to="/Doc">开始</router-link>
@@ -18,7 +18,7 @@
             <use xlink:href="#icon-Vue"></use>
           </svg>
           <h3>基于 Vue 3</h3>
-          <p>骄傲地使用了 Vue 3 Composition API</p>
+          <p>使用了 Vue 3 Composition API</p>
         </li>
         <li>
           <svg class="icon">
@@ -80,7 +80,6 @@ $color: #02bcb0;
 }
 .features {
   margin: 64px auto;
-  width: 400px;
   @media (min-width: 800px) {
     width: 800px;
   }
@@ -91,7 +90,7 @@ $color: #02bcb0;
     display: flex;
     flex-wrap: wrap;
     > li {
-      width: 400px;
+      width: 300px;
       margin: 16px 0;
       display: grid;
       justify-content: start;
@@ -101,17 +100,17 @@ $color: #02bcb0;
         "icon text";
       grid-auto-columns: 80px auto;
       grid-auto-rows: 1fr auto;
-      >svg{
-          grid-area: icon;
-          width: 64px;
-          height: 64px;
+      > svg {
+        grid-area: icon;
+        width: 64px;
+        height: 64px;
       }
-      >h3{
-          grid-area: title;
-          font-size: 28px;
+      > h3 {
+        grid-area: title;
+        font-size: 28px;
       }
-      >p{
-          grid-area:text;
+      > p {
+        grid-area: text;
       }
     }
   }

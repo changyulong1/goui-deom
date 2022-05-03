@@ -3,7 +3,7 @@
     <div class="logo">
       <router-link to="/">
         <svg class="icon">
-          <use xlink:href="#icon-wang"></use>
+          <use xlink:href="#icon-googleplus"></use>
         </svg>
       </router-link>
     </div>
@@ -12,9 +12,13 @@
         <router-link to="/Doc">文档</router-link>
       </li>
     </ul>
-      <svg v-if="toggleMenuButtonVisible" class=" toggleAside icon" @click="toggleMenu">
-        <use xlink:href="#icon-toc"></use>
-      </svg>
+    <svg
+      v-if="toggleMenuButtonVisible"
+      class="toggleAside icon"
+      @click="toggleMenu"
+    >
+      <use xlink:href="#icon-mulu"></use>
+    </svg>
   </div>
 </template>
 
@@ -22,11 +26,11 @@
 import { inject, Ref } from "vue";
 
 export default {
-  props:{
-    toggleMenuButtonVisible:{
-        type:Boolean,
-        default:false
-    }
+  props: {
+    toggleMenuButtonVisible: {
+      type: Boolean,
+      default: false,
+    },
   },
   setup() {
     const menuVisible = inject<Ref<boolean>>("menuVisible");
@@ -43,12 +47,12 @@ $color: #02bcb0;
 .topanv {
   color: $color;
   display: flex;
-  padding: 16px;
+  padding: 20px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 20;
   justify-content: center;
   align-items: center;
   > .logo {
@@ -57,6 +61,7 @@ $color: #02bcb0;
     svg {
       width: 32px;
       height: 32px;
+      margin: 10px 0;
     }
   }
   > .menu {
@@ -82,7 +87,7 @@ $color: #02bcb0;
       display: none;
     }
     > .logo {
-      margin: 0 auto;
+      display: none;
     }
     > .toggleAside {
       display: inline-block;

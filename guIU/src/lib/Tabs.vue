@@ -1,8 +1,8 @@
 <template>
-  <div class="guIu-tabs">
-    <div class="guIu-tabs-nav" ref="container">
+  <div class="goIu-tabs">
+    <div class="goIu-tabs-nav" ref="container">
       <div
-        class="guIu-tabs-nav-item"
+        class="goIu-tabs-nav-item"
         v-for="(t, index) in titles"
         @click="select(t)"
         :ref="
@@ -15,11 +15,11 @@
       >
         {{ t }}
       </div>
-      <div class="guIu-tabs-nav-indicator" ref="indicator"></div>
+      <div class="goIu-tabs-nav-indicator" ref="indicator"></div>
     </div>
-    <div class="guIu-tabs-content">
+    <div class="goIu-tabs-content">
       <component
-        class="guIu-tabs-content-item"
+        class="goIu-tabs-content-item"
         v-for="(c, index) in defaults"
         :key="index"
         :class="{ selected: c.props.title === selected }"
@@ -80,7 +80,7 @@ export default {
 $blue: #40a9ff;
 $color: #333;
 $border-color: #d9d9d9;
-.guIu-tabs {
+.goIu-tabs {
   &-nav {
     display: flex;
     color: $color;

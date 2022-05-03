@@ -82,7 +82,7 @@ export default {
 }
 
 aside {
-  background: lightblue;
+  background: #e5f3f7;
   width: 150px;
   padding: 16px 0;
   position: fixed;
@@ -94,6 +94,7 @@ aside {
   > h2 {
     margin-bottom: 4px;
     padding: 4px 16px;
+    font-size: 18px;
   }
   > ol {
     > li {
@@ -101,6 +102,7 @@ aside {
         display: block;
         padding: 4px 16px;
         text-decoration: none;
+        font-size: 14px;
       }
       .router-link-active {
         background: white;

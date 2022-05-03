@@ -1,12 +1,12 @@
 <template>
   <template v-if="visible">
     <Teleport to="body">
-      <div class="guIu-dialog-overlay" @click="noclose"></div>
-      <div class="guIu-dialog-wrapper">
-        <div class="guIu-dialog">
+      <div class="goIu-dialog-overlay" @click="noclose"></div>
+      <div class="goIu-dialog-wrapper">
+        <div class="goIu-dialog">
           <header>
             <slot name="title"/>
-            <span class="guIu-dialog-close" @click="close"></span>
+            <span class="goIu-dialog-close" @click="close"></span>
           </header>
           <main>
             <slot name="content" />
@@ -66,7 +66,7 @@ export default {
 <style lang="scss">
 $radius: 4px;
 $border-color: #d9d9d9;
-.guIu-dialog {
+.goIu-dialog {
   background: white;
   border-radius: $radius;
   box-shadow: 0 0 3px fade_out(black, 0.5);

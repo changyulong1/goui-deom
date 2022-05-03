@@ -1,11 +1,11 @@
 {
-  "name": "gu-ui-1",
-  "version": "0.0.4",
+  "name": "go-ui-1",
+  "version": "0.0.1",
   "files": [
     "dist/lib/*"
   ],
-  "main": "dist/lib/gulu.js",
-  "module": "dist/lib/gulu.esm.js",
+  "main": "dist/lib/golu.js",
+  "module": "dist/lib/golu.esm.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
@@ -17,11 +17,11 @@
     "github-markdown-css": "4.0.0",
     "marked": "1.1.1",
     "prismjs": "1.21.0",
-    "vue": "3.0.0",
-    "vue-router": "4.0.0-beta.3"
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0-beta.3"
   },
   "devDependencies": {
-    "@vue/compiler-sfc": "3.0.0",
+    "@vue/compiler-sfc": "^3.0.0",
     "babel-plugin-prismjs": "^2.1.0",
     "rollup-plugin-esbuild": "2.5.0",
     "rollup-plugin-scss": "2.6.0",

@@ -1,5 +1,9 @@
 <template>
-  <button @click="toggle" class="guIu-Switch" :class="{ 'guIu-checked': value }">
+  <button
+    @click="toggle"
+    class="goIu-Switch"
+    :class="{ 'goIu-checked': value }"
+  >
     <span></span>
   </button>
 </template>
@@ -21,7 +25,7 @@ export default {
 <style lang="scss">
 $h: 22px;
 $h1: $h - 4px;
-.guIu-Switch {
+.goIu-Switch {
   height: $h;
   width: $h * 2;
   border-radius: $h/2;
@@ -38,7 +42,7 @@ $h1: $h - 4px;
     border-radius: $h/2;
     transition: all 250ms;
   }
-  &.guIu-checked {
+  &.goIu-checked {
     background: #1890ff;
     > span {
       left: calc(100% - #{$h1} - 2px);
@@ -52,7 +56,7 @@ $h1: $h - 4px;
       width: $h1 + 4px;
     }
   }
-  &.guIu-checked:active {
+  &.goIu-checked:active {
     > span {
       width: $h1 + 4px;
       margin-left: -4px;
