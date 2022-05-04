@@ -91,7 +91,7 @@ $color: #02bcb0;
     flex-wrap: wrap;
     > li {
       width: 300px;
-      margin: 16px 0;
+      margin: 16px 26px;
       display: grid;
       justify-content: start;
       align-content: space-between;

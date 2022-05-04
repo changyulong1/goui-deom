@@ -12,13 +12,13 @@ export default {
     globals: {
       vue: 'Vue'
     },
-    name: 'Gulu',
-    file: 'dist/lib/gulu.js',
+    name: 'Golu',
+    file: 'dist/lib/golu.js',
     format: 'umd',
     plugins: [terser()]
   }, {
-    name: 'Gulu',
-    file: 'dist/lib/gulu.esm.js',
+    name: 'Golu',
+    file: 'dist/lib/golu.esm.js',
     format: 'es',
     plugins: [terser()]
   }],
@@ -27,7 +27,7 @@ export default {
     esbuild({
       include: /\.[jt]s$/,
       minify: process.env.NODE_ENV === 'production',
-      target: 'es2015' 
+      target: 'es2015'
     }),
     vue({
       include: /\.vue$/,

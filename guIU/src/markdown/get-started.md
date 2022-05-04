@@ -4,7 +4,7 @@
 然后在你的代码中写入下面的代码
 
 ```
-import {Button, Tabs, Switch, Dialog} from "king-ui"
+import { Button, Switch, Dialog, Tab, Carousel } from "go-ui-1";
 ```
 
 就可以使用我提供的组件了。
@@ -20,7 +20,8 @@ import {Button, Tabs, Switch, Dialog} from "king-ui"
   </div>
 </template>
 <script>
-import {Button, Tabs, Switch, Dialog} from "king-ui"
+import { Button, Switch, Dialog, Tab, Carousel } from "go-ui-1";
+import "go-ui-1/dist/lib/golu.css";
 export default {
   components: {Button}
 }

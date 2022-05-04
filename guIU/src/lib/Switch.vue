@@ -12,6 +12,7 @@ export default {
   props: {
     value: {
       type: Boolean,
+      default: false,
     },
   },
   setup(props, context) {
