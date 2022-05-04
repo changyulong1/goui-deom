@@ -56,6 +56,7 @@ export default {
         time = setInterval(() => {
           if (index.value === props.urlList.length - 1) {
             index.value = 0;
+            return;
           }
           index.value += 1;
         }, props.time);

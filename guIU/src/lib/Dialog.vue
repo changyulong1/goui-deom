@@ -5,15 +5,15 @@
       <div class="goIu-dialog-wrapper">
         <div class="goIu-dialog">
           <header>
-            <slot name="title"/>
+            <slot name="title" />
             <span class="goIu-dialog-close" @click="close"></span>
           </header>
           <main>
             <slot name="content" />
           </main>
           <footer>
-            <Button level="main" @click="ok">OK</Button>
-            <Button @click="Cancel">Cancel</Button>
+            <Button level="main" @click="ok">取消</Button>
+            <Button @click="Cancel">确认</Button>
           </footer>
         </div>
       </div>
@@ -42,6 +42,7 @@ export default {
   },
   setup(props, context) {
     const close = () => {
+      console.log(555);
       context.emit("update:visible", false);
     };
     const noclose = () => {
@@ -50,12 +51,12 @@ export default {
       }
     };
     const ok = () => {
-      if (props.ok?.() !== false) {
+      if (props.ok && props.ok() !== false) {
         close();
       }
     };
     const Cancel = () => {
-       props.Cancel?.()
+      props.Cancel && props.Cancel();
       close();
     };
 

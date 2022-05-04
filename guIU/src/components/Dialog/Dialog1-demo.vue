@@ -14,21 +14,21 @@
   </Dialog>
 </template>
 <script lang="ts">
-import Button from "../../lib/Button.vue"
+import Button from "../../lib/Button.vue";
 import Dialog from "../../lib/Dialog.vue";
-import { ref,h } from "vue";
+import { ref, h } from "vue";
 export default {
-  components: { Dialog,Button},
+  components: { Dialog, Button },
   setup() {
     const x = ref(false);
     const toggle = () => {
       x.value = !x.value;
     };
     const fn1 = () => {
-      return false;
+      return true;
     };
     const fn2 = () => {};
-    return { toggle, x, fn1, fn2,}
-  }
+    return { toggle, x, fn1, fn2 };
+  },
 };
 </script>
